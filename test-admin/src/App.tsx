@@ -4,6 +4,7 @@ import { UserList } from './users';
 import { PostCreate, PostEdit, PostList } from './posts';
 import PostIcon from '@mui/icons-material/Book';
 import UserIcon from '@mui/icons-material/Group';
+import { Dashboard } from './Dashboard';
 
 /**
  * Data Provider: Adapter that allows react-admin to talk to your API
@@ -12,7 +13,7 @@ import UserIcon from '@mui/icons-material/Group';
  *                     to display the list of users (not used in production)
  */
 export const App = () => (
-  <Admin dataProvider={dataProvider}>
+  <Admin dataProvider={dataProvider} dashboard={Dashboard}>
     <Resource
       name="posts"
       list={PostList}
