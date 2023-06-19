@@ -14,7 +14,11 @@ import { authProvider } from './authProvider';
  *                     to display the list of users (not used in production)
  */
 export const App = () => (
-  <Admin authProvider={authProvider} dataProvider={dataProvider} dashboard={Dashboard}>
+  <Admin
+    authProvider={authProvider}
+    dataProvider={dataProvider}
+    dashboard={Dashboard}
+  >
     <Resource
       name="posts"
       list={PostList}
