@@ -7,5 +7,5 @@ import jsonServerProvider from 'ra-data-json-server';
  * JSONPlaceholder URL: https://jsonplaceholder.typicode.com
  */
 export const dataProvider = jsonServerProvider(
-    import.meta.env.VITE_JSON_SERVER_URL
+  import.meta.env.VITE_JSON_SERVER_URL
 );

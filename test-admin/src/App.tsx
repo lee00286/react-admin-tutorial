@@ -1,5 +1,10 @@
-
-import { Admin, Resource, ListGuesser, EditGuesser, ShowGuesser } from 'react-admin';
+import {
+  Admin,
+  Resource,
+  ListGuesser,
+  EditGuesser,
+  ShowGuesser
+} from 'react-admin';
 import { dataProvider } from './dataProvider';
 import { UserList } from './users';
 
@@ -15,5 +20,3 @@ export const App = () => (
     <Resource name="users" list={UserList} />
   </Admin>
 );
-
-    
