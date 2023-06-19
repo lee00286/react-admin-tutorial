@@ -1,11 +1,11 @@
 import { Admin, Resource } from 'react-admin';
-import { dataProvider } from './dataProvider';
-import { UserList } from './users';
-import { PostCreate, PostEdit, PostList } from './posts';
+import { dataProvider } from './providers/dataProvider';
+import { UserList } from './pages/users';
+import { PostCreate, PostEdit, PostList } from './pages/posts';
 import PostIcon from '@mui/icons-material/Book';
 import UserIcon from '@mui/icons-material/Group';
-import { Dashboard } from './Dashboard';
-import { authProvider } from './authProvider';
+import { Dashboard } from './pages/Dashboard';
+import { authProvider } from './providers/authProvider';
 
 /**
  * Data Provider: Adapter that allows react-admin to talk to your API
