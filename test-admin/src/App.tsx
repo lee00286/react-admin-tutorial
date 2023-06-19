@@ -1,13 +1,7 @@
-import {
-  Admin,
-  Resource,
-  ListGuesser,
-  EditGuesser,
-  ShowGuesser
-} from 'react-admin';
+import { Admin, Resource } from 'react-admin';
 import { dataProvider } from './dataProvider';
 import { UserList } from './users';
-import { PostList } from './posts';
+import { PostCreate, PostEdit, PostList } from './posts';
 
 /**
  * Data Provider: Adapter that allows react-admin to talk to your API
@@ -17,8 +11,13 @@ import { PostList } from './posts';
  */
 export const App = () => (
   <Admin dataProvider={dataProvider}>
-    {/* <Resource name="users" list={ListGuesser} /> */}
+    <Resource
+      name="posts"
+      list={PostList}
+      edit={PostEdit}
+      create={PostCreate}
+    />
     <Resource name="users" list={UserList} recordRepresentation={'name'} />
-    <Resource name="posts" list={PostList} />
+    {/* <Resource name="users" list={ListGuesser} /> */}
   </Admin>
 );
