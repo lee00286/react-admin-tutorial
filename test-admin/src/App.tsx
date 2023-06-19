@@ -7,6 +7,7 @@ import {
 } from 'react-admin';
 import { dataProvider } from './dataProvider';
 import { UserList } from './users';
+import { PostList } from './posts';
 
 /**
  * Data Provider: Adapter that allows react-admin to talk to your API
@@ -17,6 +18,7 @@ import { UserList } from './users';
 export const App = () => (
   <Admin dataProvider={dataProvider}>
     {/* <Resource name="users" list={ListGuesser} /> */}
-    <Resource name="users" list={UserList} />
+    <Resource name="users" list={UserList} recordRepresentation={'name'} />
+    <Resource name="posts" list={PostList} />
   </Admin>
 );
